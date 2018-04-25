@@ -1,0 +1,12 @@
+Package: PRISM
+Type: Package
+Title: (PRISM) Penalized Regression with Inferred Seasonality Module - Forecasting unemployment using Internet search data
+Version: 0.1.0
+Author: Dingdong Yi
+Maintainer: Dingdong Yi <ddyi@fas.harvard.edu>
+Description: Supplementary R package for article "Forecasting unemployment using Internet search data via PRISM", by Dingdong Yi, and S. C. Kou.
+License: GPL-2
+Imports: xts, glmnet, zoo
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1

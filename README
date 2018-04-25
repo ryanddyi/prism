@@ -1,0 +1,12 @@
+This PRISM package aims to generate forecast estimation of weekly unemployment initial claim data. The methodology is based on the paper 'Forecasting unemployment using Internet search data via PRISM' (see reference).
+
+**** Install ****
+Use standard installation of local R package. Note that dependent packages (see DESCRIPTION) must be installed first from CRAN:
+~$ R CMD INSTALL PRISM.tar.gz
+
+**** Reproducing the paper ****
+
+
+
+**** Contact ****
+Dingdong Yi (shihaoyang@g.harvard.edu)
