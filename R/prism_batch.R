@@ -24,7 +24,8 @@
 #'
 #' @export
 
-prism_batch<-function(data, GTdata, var, n.training=156, UseGoogle=T, alpha=1, nPred.vec=0:3, start.date = NULL, n.weeks = NULL, discount = 0.01, sepL1 = F){
+prism_batch<-function(data, GTdata, var, n.training=156, UseGoogle=T, alpha=1, nPred.vec=0:3,
+                      start.date = NULL, n.weeks = NULL, discount = 0.01, sepL1 = F){
 
   # n.lags determined by var
   n.lag = 1:dim(var$y.lags)[2]

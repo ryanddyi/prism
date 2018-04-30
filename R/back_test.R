@@ -12,6 +12,13 @@
 #' @param sepL1 if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)
 #' @return \code{prediction} \code{nPred} week ahead prediction of the whole periods (07 - 16).
 #'
+#' @examples
+#' claim_data = load_claim_data()
+#' prism_prediction = back_test()
+#' 
+#' #evaluate the out-of-sample prediction error as a ratio to naive method 
+#' evaluation_table(claim_data, prism_prediction) 
+#' 
 #' @export
 
 

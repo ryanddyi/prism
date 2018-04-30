@@ -9,15 +9,15 @@ back_test(n.lag = 1:52, s.window = 52, n.history = 700, stl = TRUE,
   discount = 0.01, sepL1 = F)
 }
 \arguments{
-\item{n.lag}{the lags in regression (by default = 1:52 for weekly data)}
+\item{n.lag}{the number of lags to be used as regressor in Stage 2 of PRISM (by default = 1:52 for weekly data)}
 
-\item{s.window}{seasonality span  (by default = 52 for weekly data)}
+\item{s.window}{seasonality span in seasonal decomposition (by default = 52 for weekly data)}
 
 \item{n.history}{length of training period (e.g. in weeks) for seasonal decomposition.}
 
 \item{stl}{if TRUE, use STL seasonal decomposition; if FALSE, use classic additive seasonal decomposition.}
 
-\item{n.training}{length of regression training period (by default = 156)}
+\item{n.training}{length of training period in Stage 2, penalized linear regression (by default = 156)}
 
 \item{UseGoogle}{boolean variable indicating whether to use Google Trend data.}
 
@@ -25,7 +25,7 @@ back_test(n.lag = 1:52, s.window = 52, n.history = 700, stl = TRUE,
 
 \item{nPred}{the number of periods ahead for forecast. nPred = 0,1,2,3.}
 
-\item{discount}{exponential weighting: (1-discount)^lag}
+\item{discount}{exponential weighting: (1-discount)^lag.}
 
 \item{sepL1}{if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)}
 }
@@ -34,4 +34,12 @@ back_test(n.lag = 1:52, s.window = 52, n.history = 700, stl = TRUE,
 }
 \description{
 Out-of-sample prediction for whole period
+}
+\examples{
+claim_data = load_claim_data()
+prism_prediction = back_test()
+
+#evaluate the out-of-sample prediction error as a ratio to naive method 
+evaluation_table(claim_data, prism_prediction) 
+
 }

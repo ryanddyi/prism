@@ -1,40 +1,25 @@
-library('devtools')
-library('roxygen2')
+library('PRISM')
 
-setwd("/Users/ydd/Documents/macroEcon/package")
+## example of out-of-sample evaluation
 
-setwd('./PRISM')
-document()
+claim_data = load_claim_data()
 
-setwd('..')
-install('PRISM')
+prism_prediction = back_test()
 
-# example of out-of-sample evaluation
+# evaluate the out-of-sample prediction error as a ratio to naive method 
 
-claim_data = PRISM::load_claim_data()
+evaluation_table(claim_data, prism_prediction) 
 
-prism_prediction = PRISM::back_test()
+## example for single week prism.
 
-PRISM::evaluation_table(claim_data, prism_prediction)
+prism_data = load_5y_search_data('0610')
+data = prism_data$claim.data[1:200] # load claim data from 2006-01-07 to 2009-10-31
+data[200] = NA # delete the data for the latest date and try to nowcast it.
 
-# example for single week prism.
+data.early = prism_data$claim.earlyData # load claim prior to 2006
+GTdata = prism_data$allSearch[1:200] # load Google trend data from 2006-01-07 to 2009-10-31
 
-folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM"))
-prism.fit = list()
-
-folder = folders_5y[1]
-
-prism_data = load_5y_search_data(folder)
-
-data = prism_data$claim.data[1:200]
-data[200] = NA
-data.early = prism_data$claim.earlyData
-GTdata = prism_data$allSearch[1:200]
-
-result = prism(data, data.early, GTdata)
-result$pred
-
-# example for plot
-
+result = prism(data, data.early, GTdata) # call prism method
+result$pred # output 0-3wk forward prediction
 
 

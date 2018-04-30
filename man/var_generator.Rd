@@ -14,7 +14,7 @@ var_generator(data, data.early, stl = TRUE, n.lag = 1:52, s.window = 52,
 
 \item{stl}{if TRUE, use STL seasonal decomposition; if FALSE, use classic additive seasonal decomposition.}
 
-\item{n.lag}{the lags in regression (by default = 1:52 for weekly data)}
+\item{n.lag}{the number of lags to be used as regressor in Stage 2 of PRISM (by default = 1:52 for weekly data)}
 
 \item{s.window}{seasonality span  (by default = 52 for weekly data)}
 
@@ -27,5 +27,5 @@ A list of following named objects
 }
 }
 \description{
-Stage 1 of PRISM. The function generates prism seasonal component and seasonally adjusted lag components.
+Stage 1 of PRISM. The function generates prism seasonal components and seasonally adjusted lag components.
 }
