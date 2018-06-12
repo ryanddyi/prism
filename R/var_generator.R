@@ -15,6 +15,9 @@
 #' }
 #'
 #' @importFrom zoo index
+#' @importFrom stats decompose ts
+#' @importFrom utils tail
+#'
 #'
 #' @export
 

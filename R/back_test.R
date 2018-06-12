@@ -15,17 +15,17 @@
 #' @examples
 #' claim_data = load_claim_data()
 #' prism_prediction = back_test()
-#' 
-#' #evaluate the out-of-sample prediction error as a ratio to naive method 
-#' evaluation_table(claim_data, prism_prediction) 
-#' 
+#'
+#' #evaluate the out-of-sample prediction error as a ratio to naive method
+#' evaluation_table(claim_data, prism_prediction)
+#'
 #' @export
 
 
 back_test<-function(n.lag=1:52, s.window=52, n.history=700, stl = TRUE, n.training=156,
                     UseGoogle=T, alpha=1, nPred=0, discount = 0.01, sepL1 = F){
 
-  folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM"))
+  folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM.forecast"))
   prism.fit = list()
 
   for (folder in folders_5y){
@@ -51,6 +51,6 @@ back_test<-function(n.lag=1:52, s.window=52, n.history=700, stl = TRUE, n.traini
   }
 
   prediction.all = prediction.all[,nPred+1]
-  prediction = prediction.all[-which(time(prediction.all)[-1]==time(prediction.all)[-length(prediction.all)])]
+  prediction = prediction.all[-which(stats::time(prediction.all)[-1]==stats::time(prediction.all)[-length(prediction.all)])]
   list(prediction = prediction, nPred = nPred)
 }

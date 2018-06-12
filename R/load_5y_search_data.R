@@ -18,7 +18,7 @@
 load_5y_search_data<-function(folder='0408'){
 
   # check if the folder name is among the available
-  folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM"))
+  folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM.forecast"))
   if (!folder %in% folders_5y) {
     print('Not available. Consider one of the following:')
     print(folders_5y)
@@ -26,10 +26,10 @@ load_5y_search_data<-function(folder='0408'){
   }
 
   # weekly GT data is available to a max span of 5 years.
-  searchTerms = list.files(system.file("extdata/search_data_5year", folder, package = "PRISM"))
+  searchTerms = list.files(system.file("extdata/search_data_5year", folder, package = "PRISM.forecast"))
 
   for (i in 1:length(searchTerms)){
-    search=read.csv(system.file("extdata/search_data_5year", folder, searchTerms[i], package = "PRISM"), header = T)
+    search = utils::read.csv(system.file("extdata/search_data_5year", folder, searchTerms[i], package = "PRISM.forecast"), header = T)
 
     fmt = "%Y-%m-%d"
     date.all = as.Date(search$date,fmt)+6

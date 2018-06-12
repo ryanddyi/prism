@@ -39,7 +39,7 @@ Out-of-sample prediction for whole period
 claim_data = load_claim_data()
 prism_prediction = back_test()
 
-#evaluate the out-of-sample prediction error as a ratio to naive method 
-evaluation_table(claim_data, prism_prediction) 
+#evaluate the out-of-sample prediction error as a ratio to naive method
+evaluation_table(claim_data, prism_prediction)
 
 }

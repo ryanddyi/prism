@@ -22,6 +22,8 @@
 #'
 #' @importFrom zoo index
 #'
+#' @importFrom stats time coef predict lm sd
+#'
 #' @examples
 #' prism_data = load_5y_search_data('0610')
 #' data = prism_data$claim.data[1:200] # load claim data from 2006-01-07 to 2009-10-31

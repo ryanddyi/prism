@@ -12,12 +12,14 @@
 #' \item \code{claim.early} unemployment initial claim data prior to GT.startDate
 #' }
 #'
+#' @importFrom utils read.csv
+#'
 #' @export
 
 
 load_claim_data<-function(GT.startDate = "2004-01-03", GT.endDate = "2016-12-31"){
 
-  icnsa=read.csv(system.file("extdata", "ICNSA.csv", package = "PRISM"), header=T)
+  icnsa=read.csv(system.file("extdata", "ICNSA.csv", package = "PRISM.forecast"), header=T)
 
   # load all claim data
   fmt <-  "%Y-%m-%d"

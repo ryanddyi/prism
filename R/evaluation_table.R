@@ -8,13 +8,13 @@
 evaluation_table<-function(claim_data, prism_prediction){
   prediction = prism_prediction$prediction
   nPred = prism_prediction$nPred
-  start = which(time(claim_data$claim.all) == time(xts::first(prediction)))
-  end = which(time(claim_data$claim.all) == time(xts::last(prediction)))
+  start = which(stats::time(claim_data$claim.all) == stats::time(xts::first(prediction)))
+  end = which(stats::time(claim_data$claim.all) == stats::time(xts::last(prediction)))
 
   diff=as.numeric(prediction)-claim_data$claim.all$icnsa[start:end+nPred]
   diff.naive=as.numeric(claim_data$claim.all$icnsa[start:end-1]) - claim_data$claim.all$icnsa[start:end+nPred]
 
-  Years=as.numeric(format(time(diff),'%Y'))
+  Years=as.numeric(format(stats::time(diff),'%Y'))
 
   yearly=2007:2016
   summary=array(dim=c(2,1+length(yearly)))
