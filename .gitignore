@@ -3,3 +3,5 @@
 *.Rproj
 *.Rbuildignore
 .Rproj.user
+*.swp
+.Rhistory
