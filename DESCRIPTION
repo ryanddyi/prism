@@ -1,14 +1,16 @@
 Package: PRISM.forecast
 Type: Package
-Title: (PRISM.forecast) Penalized Regression with Inferred Seasonality Module - Forecasting Unemployment using Internet Search Data
-Version: 0.1.1
+Title: Penalized Regression with Inferred Seasonality Module - Forecasting Unemployment Initial Claims using 'Google Trends' Data
+Version: 0.1.6
 Authors@R: c(
 	person("Dingdong", "Yi", email = "ddyi@fas.harvard.edu", role = c("aut", "cre")),
 	person("Samuel", "Kou", email = "kou@stat.harvard.edu", role = c("aut")))
 Maintainer: Dingdong Yi <ddyi@fas.harvard.edu>
-Description: Supplementary R package for article "Forecasting unemployment using Internet search data via PRISM", by Dingdong Yi, and S. C. Kou.
+Description: Implements Penalized Regression with Inferred Seasonality Module (PRISM) to generate forecast estimation of weekly unemployment initial claims using 'Google Trends' data. It includes required data and tools for backtesting the performance in 2007-2016.
 License: GPL-2
 Imports: xts, glmnet, zoo, stats, utils
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+URL: https://github.com/ryanddyi/prism
+BugReports: https://github.com/ryanddyi/prism/issues
