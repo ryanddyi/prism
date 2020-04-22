@@ -2,7 +2,7 @@
 #'
 #' Load weekly unemployment initial claim data and related Google Trend data over 5-year span (each week ends on the Saturday). The list of Google search terms is the same as in paper.
 #'
-#' @param folder foldernames for a certain periods of Google Trends data. The foldernames are "0408", "0610", "0812", "1014", "1216". For example, the folder "0408" is for 2004-2008.
+#' @param folder foldernames for a certain periods of Google Trends data. The foldernames are "0408", "0610", "0812", "1014", "1216", "1418", "1620". For example, the folder "0408" is for 2004-2008.
 #'
 #' @return A list of following named xts objects
 #' \itemize{

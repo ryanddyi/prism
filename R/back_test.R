@@ -10,7 +10,7 @@
 #' @param UseGoogle boolean variable indicating whether to use Google Trend data.
 #' @param discount exponential weighting: (1-discount)^lag.
 #' @param sepL1 if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)
-#' @return \code{prediction} \code{nPred} week ahead prediction of the whole periods (07 - 16).
+#' @return \code{prediction} \code{nPred} week ahead prediction of the whole periods (07 - 20).
 #'
 #' @examples
 #' claim_data = load_claim_data()
