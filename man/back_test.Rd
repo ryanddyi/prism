@@ -30,7 +30,7 @@ back_test(n.lag = 1:52, s.window = 52, n.history = 700, stl = TRUE,
 \item{sepL1}{if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)}
 }
 \value{
-\code{prediction} \code{nPred} week ahead prediction of the whole periods (07 - 16).
+\code{prediction} \code{nPred} week ahead prediction of the whole periods (07 - 20).
 }
 \description{
 Out-of-sample prediction for whole period

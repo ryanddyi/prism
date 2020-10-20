@@ -11,7 +11,7 @@
 #' @param n.weeks the number of weeks in the batch. If NULL, the forecast end at the latest possible date.
 #' @param nPred.vec the number of periods ahead for forecast. nPred.vec could be a vector of intergers. e.g. nPred.vec=0:3 gives results from nowcast to 3-week ahead forecast.
 #' @param UseGoogle boolean variable indicating whether to use Google Trend data.
-#' @param discount exponential weighting: (1-discount)^lag (by default = 0.01)
+#' @param discount exponential weighting: (1-discount)^lag (by default = 0.015)
 #' @param sepL1 if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)
 #'
 #' @return A list of following named objects
@@ -25,7 +25,7 @@
 #' @export
 
 prism_batch<-function(data, GTdata, var, n.training=156, UseGoogle=T, alpha=1, nPred.vec=0:3,
-                      start.date = NULL, n.weeks = NULL, discount = 0.01, sepL1 = F){
+                      start.date = NULL, n.weeks = NULL, discount = 0.015, sepL1 = F){
 
   # n.lags determined by var
   n.lag = 1:dim(var$y.lags)[2]

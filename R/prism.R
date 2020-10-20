@@ -11,7 +11,7 @@
 #' @param alpha penalty between lasso and ridge. alpha=1 represents lasso, alpha=0 represents ridge, alpha=NA represents no penalty.
 #' @param nPred.vec the number of periods ahead for forecast. nPred.vec could be a vector of intergers. e.g. nPred.vec=0:3 gives results from nowcast to 3-week ahead forecast.
 #' @param UseGoogle boolean variable indicating whether to use Google Trend data.
-#' @param discount exponential weighting: (1-discount)^lag (by default = 0.01).
+#' @param discount exponential weighting: (1-discount)^lag (by default = 0.015).
 #' @param sepL1 if TRUE, use separate L1 regularization parameters for time series components and exogenous variables (Goolgle Trend data)
 #'
 #' @return A list of following named objects
@@ -39,7 +39,7 @@
 
 
 prism<-function(data, data.early, GTdata, stl = TRUE, n.history = 700, n.training = 156, alpha = 1,
-                UseGoogle = T, nPred.vec=0:3, discount = 0.01, sepL1 = F){
+                UseGoogle = T, nPred.vec=0:3, discount = 0.015, sepL1 = F){
 
   var = var_generator(data = data, data.early = data.early, stl)
 

@@ -7,7 +7,7 @@
 load_5y_search_data(folder = "0408")
 }
 \arguments{
-\item{folder}{foldernames for a certain periods of Google Trends data. The foldernames are "0408", "0610", "0812", "1014", "1216". For example, the folder "0408" is for 2004-2008.}
+\item{folder}{foldernames for a certain periods of Google Trends data. The foldernames are "0408", "0610", "0812", "1014", "1216", "1418", "1620". For example, the folder "0408" is for 2004-2008.}
 }
 \value{
 A list of following named xts objects

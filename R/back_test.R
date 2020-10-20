@@ -24,7 +24,7 @@
 
 
 back_test<-function(n.lag=1:52, s.window=52, n.history=700, stl = TRUE, n.training=156,
-                    UseGoogle=T, alpha=1, nPred=0, discount = 0.01, sepL1 = F){
+                    UseGoogle=T, alpha=1, nPred=0, discount = 0.015, sepL1 = F){
 
   folders_5y = list.files(system.file("extdata/search_data_5year", package = "PRISM.forecast"))
   prism.fit = list()
