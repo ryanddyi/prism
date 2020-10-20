@@ -1,7 +1,7 @@
 Package: PRISM.forecast
 Type: Package
 Title: Penalized Regression with Inferred Seasonality Module - Forecasting Unemployment Initial Claims using 'Google Trends' Data
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
 	person("Dingdong", "Yi", email = "ryan.ddyi@gmail.com", role = c("aut", "cre")),
 	person("Samuel", "Kou", email = "kou@stat.harvard.edu", role = c("aut")),
